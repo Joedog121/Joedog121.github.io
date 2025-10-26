@@ -2,74 +2,74 @@ body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background: #f5f5f5;
   color: #333;
 }
 
 header {
-  background-color: #0d47a1;
-  color: white;
-  padding: 2rem;
-  text-align: center;
-}
-
-.hero-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.services {
-  padding: 2rem;
-  background-color: white;
-  margin: 1rem;
-  border-radius: 8px;
-}
-
-.package-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: space-around;
-}
-
-.package {
-  background-color: #e3f2fd;
-  border-radius: 8px;
+  background: #111;
+  color: #fff;
   padding: 1rem;
-  width: 300px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero {
+  background: url('your-hero-image.jpg') center/cover no-repeat;
+  padding: 4rem;
   text-align: center;
+  color: white;
 }
 
-.package img {
-  width: 100%;
-  border-radius: 6px;
-}
-
-.package h3 {
-  margin-top: 0.5rem;
-  color: #0d47a1;
-}
-
-.package .price {
-  font-size: 1.5rem;
+.cta-button {
+  background: #ff4500;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  text-decoration: none;
   font-weight: bold;
-  color: #1b5e20;
 }
 
-.about, .contact {
+section {
   padding: 2rem;
-  background-color: white;
-  margin: 1rem;
-  border-radius: 8px;
 }
 
-h2 {
-  color: #0d47a1;
+.service-card {
+  background: white;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 footer {
+  background: #111;
+  color: white;
   text-align: center;
+  padding: 1rem;
+}
+
   padding: 1rem;
   background-color: #0d47a1;
   color: white;
