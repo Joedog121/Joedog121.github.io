@@ -13,7 +13,51 @@ header {
   text-align: center;
 }
 
-.services, .about, .contact {
+.hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.services {
+  padding: 2rem;
+  background-color: white;
+  margin: 1rem;
+  border-radius: 8px;
+}
+
+.package-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-around;
+}
+
+.package {
+  background-color: #e3f2fd;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 300px;
+  text-align: center;
+}
+
+.package img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.package h3 {
+  margin-top: 0.5rem;
+  color: #0d47a1;
+}
+
+.package .price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1b5e20;
+}
+
+.about, .contact {
   padding: 2rem;
   background-color: white;
   margin: 1rem;
@@ -22,15 +66,6 @@ header {
 
 h2 {
   color: #0d47a1;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-ul li {
-  padding: 0.5rem 0;
 }
 
 footer {
