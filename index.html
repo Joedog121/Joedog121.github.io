@@ -1,87 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sud Bros - Mobile Car Detailing</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sud Bros — Mobile Car Detailing</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="overlay">
-      <h1>Sud Bros</h1>
-      <p>Mobile Car Detailing — Shine Delivered to Your Driveway</p>
-      <a href="#services" class="btn-primary">View Our Packages</a>
-    </div>
-  </header>
-
-  <!-- Services -->
-  <section id="services" class="services">
-    <h2>Our Detailing Packages</h2>
-    <div class="service-container">
-      <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437d9" alt="Exterior clean">
-        <h3>Basic Exterior Clean</h3>
-        <p>Hand wash, wax, tire shine, and streak-free windows — the essentials for a showroom glow.</p>
-        <a href="#booking" class="btn-secondary">Book Now</a>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">SB</div>
+        <div>
+          <h1>Sud Bros</h1>
+          <div class="tag">Mobile Car Detailing — We come to you</div>
+        </div>
       </div>
+      <nav>
+        <button class="cta ghost">Book now</button>
+        <button class="cta">Packages</button>
+      </nav>
+    </header>
 
-      <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1597004891525-39f2d7f2d8a0" alt="Interior clean">
-        <h3>Basic Interior Clean</h3>
-        <p>Vacuum, wipe-down, and dashboard polish — a quick refresh for your car’s interior.</p>
-        <a href="#booking" class="btn-secondary">Book Now</a>
-      </div>
+    <div class="hero">
+      <div class="hero-card">
+        <h2>Bring the shine back — without leaving your driveway</h2>
+        <p>Fast, friendly, eco-conscious mobile detailing for cars, trucks and SUVs. Three simple plans so you pick what fits your ride and schedule.</p>
 
-      <div class="service-card premium">
-        <img src="https://images.unsplash.com/photo-1607082349566-187342d56c8d" alt="Premium total clean">
-        <h3>Premium Total Clean</h3>
-        <p>Full interior + exterior detailing, deep shampoo, wax & polish — your car reborn.</p>
-        <a href="#booking" class="btn-secondary">Book Now</a>
+        <div class="packages">
+          <article class="card">
+            <h3>Basic Interior Clean</h3>
+            <div class="price">$39</div>
+            <div class="features">Vacuum, wipe down dash & trim, window clean, trash removal</div>
+          </article>
+
+          <article class="card">
+            <h3>Basic Exterior Clean</h3>
+            <div class="price">$45</div>
+            <div class="features">Hand wash, dry, tire shine, spot decontaminate</div>
+          </article>
+
+          <article class="card">
+            <h3>Premium Total Clean</h3>
+            <div class="price">$99</div>
+            <div class="features">Interior + exterior, clay bar, waxing, upholstery spot treatment</div>
+          </article>
+        </div>
       </div>
     </div>
-  </section>
 
-  <!-- Gallery -->
-  <section class="gallery">
-    <h2>Our Work</h2>
-    <div class="gallery-images">
-      <img src="https://images.unsplash.com/photo-1607082349566-187342d56c8d" alt="Gallery 1">
-      <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437d9" alt="Gallery 2">
-      <img src="https://images.unsplash.com/photo-1597004891525-39f2d7f2d8a0" alt="Gallery 3">
-    </div>
-  </section>
-
-  <!-- Booking Form -->
-  <section id="booking" class="booking">
-    <h2>Book Your Detailing</h2>
-    <form>
-      <label for="name">Name</label>
-      <input type="text" id="name" placeholder="Your Name" required>
-
-      <label for="email">Email</label>
-      <input type="email" id="email" placeholder="Your Email" required>
-
-      <label for="service">Select Service</label>
-      <select id="service" required>
-        <option value="">-- Choose a service --</option>
-        <option>Basic Exterior Clean</option>
-        <option>Basic Interior Clean</option>
-        <option>Premium Total Clean</option>
-      </select>
-
-      <label for="details">Additional Details</label>
-      <textarea id="details" rows="4" placeholder="Anything we should know?"></textarea>
-
-      <button type="submit">Submit Booking</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>© 2025 Sud Bros | Mobile Car Detailing | <a href="mailto:info@sudbros.com">info@sudbros.com</a></p>
-  </footer>
-
+    <footer>
+      <div>Sud Bros • Mobile Detailing • Serving your neighborhood</div>
+      <div class="contact">Questions? Call or text us at (555) 555-5555</div>
+    </footer>
+  </div>
 </body>
 </html>
