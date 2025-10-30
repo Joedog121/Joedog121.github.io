@@ -238,4 +238,11 @@ input:focus, select:focus, textarea:focus {
   padding: 20px 0;
   border-top: 1px solid #1f242d;
 }
+/* Ensure package buttons are consistent */
+.card .btn {
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+  display: block;
+}
 
