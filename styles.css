@@ -265,4 +265,42 @@ section.visible {
   opacity: 1;
   transform: translateY(0);
 }
+/* --- Booking Enhancements --- */
+.booking h2,
+.gallery h2,
+.packages h2 {
+  color: var(--text); /* ensures all section headings are bright white */
+}
+
+.booking form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.booking input,
+.booking select,
+.booking textarea {
+  background: #1c212a;
+  color: var(--text);
+  border: 1px solid #2a2f3a;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.booking input:focus,
+.booking select:focus,
+.booking textarea:focus {
+  outline: 2px solid var(--accent1);
+}
+
+.booking-result {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.success { color: #22c55e; }
+.error { color: #f87171; }
 
