@@ -1,16 +1,14 @@
 :root {
   --bg-dark: #0b0e12;
   --card-dark: #14181f;
-  --text: #e5e7eb;
+  --text: #f1f5f9;
   --muted: #9ca3af;
   --accent1: #1ecbe1;
   --accent2: #ff9a5b;
-  --gradient: linear-gradient(135deg, var(--accent1), var(--accent2));
   --radius: 14px;
   font-family: "Inter", sans-serif;
 }
 
-/* Base */
 body {
   margin: 0;
   background: var(--bg-dark);
@@ -28,7 +26,7 @@ body {
 .site-header {
   position: sticky;
   top: 0;
-  background: rgba(11, 14, 18, 0.85);
+  background: rgba(11,14,18,0.8);
   backdrop-filter: blur(10px);
   z-index: 50;
 }
@@ -60,9 +58,7 @@ body {
   color: var(--muted);
   font-weight: 500;
 }
-.nav a:hover {
-  color: var(--accent1);
-}
+.nav a:hover { color: var(--accent1); }
 
 /* Buttons */
 .btn {
@@ -74,26 +70,23 @@ body {
   cursor: pointer;
   transition: all 0.2s ease;
 }
-
 .btn-primary {
-  background: var(--gradient);
+  background: linear-gradient(135deg,#0f8ca3,#ff7a2b);
   color: #fff;
-  box-shadow: 0 0 10px rgba(30, 203, 225, 0.25);
+  box-shadow: 0 0 10px rgba(30,203,225,0.3);
   border: none;
 }
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 20px rgba(255, 154, 91, 0.4);
-  filter: brightness(1.15);
+  box-shadow: 0 0 20px rgba(255,154,91,0.5);
+  filter: brightness(1.1);
 }
-
 .nav .btn-primary {
-  background: var(--gradient);
-  box-shadow: none;
+  background: linear-gradient(135deg,#0b5566,#cc6224);
+  box-shadow: 0 0 6px rgba(30,203,225,0.3);
   padding: 8px 16px;
-  font-size: 0.95rem;
+  font-size: .95rem;
 }
-
 .btn-outline {
   border: 2px solid var(--accent1);
   color: var(--accent1);
@@ -103,10 +96,7 @@ body {
   background: var(--accent1);
   color: #fff;
 }
-.btn.full {
-  width: 100%;
-  text-align: center;
-}
+.btn.full { width: 100%; text-align: center; }
 
 /* Hero */
 .hero {
@@ -123,28 +113,20 @@ body {
   inset: 0;
   background-size: cover;
   background-position: center;
-  opacity: 0.3;
+  opacity: .3;
 }
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom right, rgba(11, 14, 18, 0.6), rgba(0, 0, 0, 0.85));
+  background: radial-gradient(circle at top left,rgba(30,203,225,.2),rgba(0,0,0,.8));
 }
 .hero-content {
   position: relative;
   z-index: 10;
   max-width: 600px;
 }
-.hero h1 {
-  font-size: 2.6rem;
-  font-weight: 800;
-  margin-bottom: 10px;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-}
-.lead {
-  color: var(--muted);
-  margin-bottom: 20px;
-}
+.hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
+.lead { color: var(--muted); margin-bottom: 20px; }
 
 /* Packages */
 .packages h2, .gallery h2, .booking h2 {
@@ -160,35 +142,29 @@ body {
 .package-grid {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
 }
 .card {
   background: var(--card-dark);
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.02);
-  transition: transform 0.2s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,.4);
+  transition: transform .2s ease;
   position: relative;
 }
-.card:hover {
-  transform: translateY(-6px);
-}
+.card:hover { transform: translateY(-6px); }
 .card-media {
   height: 180px;
   background-size: cover;
   background-position: center;
 }
-.card-body {
-  padding: 16px;
-}
+.card-body { padding: 16px; }
 .price {
   font-weight: 700;
   font-size: 1.4rem;
   margin: 8px 0;
 }
-.muted {
-  color: var(--muted);
-}
+.muted { color: var(--muted); }
 .popular .ribbon {
   position: absolute;
   top: 10px;
@@ -197,26 +173,22 @@ body {
   color: white;
   padding: 6px 10px;
   border-radius: 999px;
-  font-size: 0.8rem;
+  font-size: .8rem;
 }
 
 /* Gallery */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
   gap: 10px;
 }
 .gallery-grid img {
   width: 100%;
   border-radius: 12px;
   object-fit: cover;
-  transition: transform 0.3s ease, filter 0.3s ease;
-  filter: brightness(0.9);
+  transition: transform .3s ease;
 }
-.gallery-grid img:hover {
-  transform: scale(1.05);
-  filter: brightness(1.05);
-}
+.gallery-grid img:hover { transform: scale(1.05); }
 
 /* Booking */
 form {
@@ -240,12 +212,8 @@ input:focus, select:focus, textarea:focus {
   text-align: center;
   margin-top: 12px;
 }
-.success {
-  color: #22c55e;
-}
-.error {
-  color: #f87171;
-}
+.success { color: #22c55e; }
+.error { color: #f87171; }
 
 /* Footer */
 .site-footer {
@@ -254,53 +222,10 @@ input:focus, select:focus, textarea:focus {
   padding: 20px 0;
   border-top: 1px solid #1f242d;
 }
-
-/* Section fade-in animation */
-section {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-/* --- Booking Enhancements --- */
-.booking h2,
-.gallery h2,
-.packages h2 {
-  color: var(--text); /* ensures all section headings are bright white */
-}
-
-.booking form label {
-  display: flex;
-  flex-direction: column;
-  font-weight: 600;
-  font-size: 0.95rem;
-  color: var(--text);
-}
-
-.booking input,
-.booking select,
-.booking textarea {
-  background: #1c212a;
-  color: var(--text);
-  border: 1px solid #2a2f3a;
-  border-radius: 10px;
-  padding: 10px;
-}
-
-.booking input:focus,
-.booking select:focus,
-.booking textarea:focus {
-  outline: 2px solid var(--accent1);
-}
-
-.booking-result {
+.card .btn {
+  margin-top: 10px;
   text-align: center;
-  margin-top: 12px;
+  width: 100%;
+  display: block;
 }
-
-.success { color: #22c55e; }
-.error { color: #f87171; }
 
