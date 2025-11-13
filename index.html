@@ -103,49 +103,127 @@
       </div>
     </section>
 
-    <!-- Booking -->
-    <section id="booking" class="booking container">
-      <h2>Book Your Detail</h2>
-      <p class="section-sub">Fill in your details — we’ll confirm within the hour.</p>
+ <!-- Booking -->
+<section id="booking" class="booking container">
+  <h2>Book Now</h2>
+  <p class="section-sub">Select your date and time — we’ll confirm within the hour.</p>
 
-      <form id="bookingForm" onsubmit="handleBooking(event)">
-        <label>Full Name
-          <input type="text" name="name" required>
-        </label>
-        <label>Email or Phone
-          <input type="text" name="contact" required>
-        </label>
-        <label>Package
-          <select name="package" required>
-            <option value="">-- Choose Package --</option>
-            <option>Express Wash — $70</option>
-            <option>Interior Detail — $90</option>
-            <option>Complete Detail — $160+</option>
-          </select>
-        </label>
-        <label>Preferred Date
-          <input type="date" name="date" required>
-        </label>
-        <label>Address
-          <input type="text" name="address" placeholder="Street, City, ZIP" required>
-        </label>
-        <label>Notes
-          <textarea name="notes" rows="3" placeholder="Vehicle type, extras, etc."></textarea>
-        </label>
-        <button type="submit" class="btn btn-primary full">Submit Booking</button>
-        <p id="bookingResult" class="booking-result"></p>
-      </form>
-    </section>
-  </main>
+  <form id="bookingForm">
+    <label>
+      Full Name
+      <input type="text" name="name" required>
+    </label>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Sud Bros — All rights reserved.</p>
-    </div>
-  </footer>
+    <label>
+      Email
+      <input type="email" name="email" required>
+    </label>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    <label>
+      Vehicle Make
+      <input type="text" name="make" placeholder="e.g. Toyota" required>
+    </label>
+
+    <label>
+      Vehicle Model
+      <input type="text" name="model" placeholder="e.g. Camry" required>
+    </label>
+
+    <label>
+      Vehicle Year
+      <input type="number" name="year" min="1980" max="2026" placeholder="e.g. 2023" required>
+    </label>
+
+    <label>
+      Package
+      <select name="package" required>
+        <option value="">-- Choose Package --</option>
+        <option>Express Wash — $70</option>
+        <option>Interior Detail — $90</option>
+        <option>Complete Detail — $160+</option>
+      </select>
+    </label>
+
+    <label>
+      Preferred Date
+      <input type="date" name="date" id="datePicker" required>
+    </label>
+
+    <label>
+      Preferred Time
+      <select name="time" id="timeSelect" required>
+        <option value="">-- Choose Time --</option>
+      </select>
+    </label>
+
+    <label>
+      Address
+      <input type="text" name="address" placeholder="Street, City, ZIP" required>
+    </label>
+
+    <label>
+      Notes
+      <textarea name="notes" rows="3" placeholder="Extra details or requests"></textarea>
+    </label>
+
+    <button type="submit" class="btn btn-primary full">Submit Booking</button>
+    <p id="bookingResult" class="booking-result"></p>
+  </form>
+</section>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("p7clPP0evIYVIuils"); // Your public key
+  })();
+
+  const allTimes = ["09:00 AM","10:00 AM","11:00 AM","12:00 PM","01:00 PM","02:00 PM","03:00 PM","04:00 PM","05:00 PM"];
+  const bookedSlots = JSON.parse(localStorage.getItem("bookedSlots") || "{}");
+  const datePicker = document.getElementById("datePicker");
+  const timeSelect = document.getElementById("timeSelect");
+
+  datePicker.addEventListener("change", () => {
+    const date = datePicker.value;
+    const booked = bookedSlots[date] || [];
+    timeSelect.innerHTML = '<option value="">-- Choose Time --</option>';
+    allTimes.forEach(t => {
+      if (!booked.includes(t)) {
+        const opt = document.createElement("option");
+        opt.value = t;
+        opt.textContent = t;
+        timeSelect.appendChild(opt);
+      }
+    });
+  });
+
+  document.getElementById("bookingForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const result = document.getElementById("bookingResult");
+    const date = form.date.value;
+    const time = form.time.value;
+
+    result.textContent = "⏳ Sending your booking...";
+    result.className = "booking-result";
+
+    emailjs.sendForm("service_b2c91dg", "template_ucnib3o", form)
+      .then(() => {
+        if (!bookedSlots[date]) bookedSlots[date] = [];
+        bookedSlots[date].push(time);
+        localStorage.setItem("bookedSlots", JSON.stringify(bookedSlots));
+
+        result.textContent = "✅ Booking sent! We’ll confirm your appointment soon.";
+        result.className = "booking-result success";
+        form.reset();
+        timeSelect.innerHTML = '<option value="">-- Choose Time --</option>';
+      })
+      .catch((err) => {
+        console.error(err);
+        result.textContent = "❌ Something went wrong. Please try again later.";
+        result.className = "booking-result error";
+      });
+  });
+</script>
 
     // Smooth scroll for anchor links
     document.documentElement.style.scrollBehavior = "smooth";
