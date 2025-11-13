@@ -1,185 +1,204 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mobile Car Detailing</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script>
-      (function () {
-        emailjs.init("p7clPP0evIYVIuils");
-      })();
-    </script>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sud Bros — Mobile Car Detailing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
 
-  <body>
-    <!-- Header -->
-    <header class="site-header">
-      <div class="container header-inner">
-        <div class="brand">
-          <img src="images/logo.png" alt="Logo" class="logo" />
-          <div>
-            <div class="brand-name">Houston's Mobile Detailing</div>
-            <div class="brand-tag">Professional Car Care Anywhere</div>
-          </div>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <svg class="logo" viewBox="0 0 100 100" aria-hidden="true">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1">
+              <stop offset="0" stop-color="#1ecbe1"/>
+              <stop offset="1" stop-color="#ff9a5b"/>
+            </linearGradient>
+          </defs>
+          <rect x="8" y="30" width="84" height="40" rx="6" fill="url(#g1)"/>
+          <circle cx="30" cy="60" r="6" fill="#fff"/>
+          <circle cx="70" cy="60" r="6" fill="#fff"/>
+          <text x="50" y="46" text-anchor="middle" font-size="18" font-weight="700" fill="#fff" font-family="Inter, system-ui">Sud</text>
+        </svg>
+        <div>
+          <div class="brand-name">Sud Bros</div>
+          <div class="brand-tag">Mobile Car Detailing</div>
         </div>
-        <nav class="nav">
-          <a href="#packages">Packages</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#booking" class="btn btn-primary">Book Now</a>
-        </nav>
       </div>
-    </header>
+      <nav class="nav">
+        <a href="#packages">Packages</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#booking" class="btn btn-primary">Book Now</a>
+      </nav>
+    </div>
+  </header>
 
+  <main>
     <!-- Hero -->
     <section class="hero">
-      <div
-        class="hero-bg"
-        style="background-image: url('images/hero-car.jpg');"
-      ></div>
+      <div class="hero-bg" style="background-image:url('images/hero.jpg');"></div>
       <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <h1>Premium Mobile Detailing</h1>
-        <p class="lead">
-          We bring top-tier car care directly to your driveway. From basic
-          washes to full interior and exterior detailing, we do it all.
-        </p>
-        <a href="#booking" class="btn btn-primary">Book Now</a>
+      <div class="container hero-content">
+        <h1>Professional Mobile Car Detailing</h1>
+        <p class="lead">We bring the showroom shine to your driveway — anywhere, anytime.</p>
+        <div class="hero-actions">
+          <a href="#packages" class="btn btn-outline">View Packages</a>
+          <a href="#booking" class="btn btn-primary">Book a Detail</a>
+        </div>
       </div>
     </section>
 
     <!-- Packages -->
     <section id="packages" class="packages container">
       <h2>Packages</h2>
-      <p class="section-sub">Choose the detailing service that fits you best</p>
+      <p class="section-sub">Choose your level of clean — we handle the rest.</p>
+
       <div class="package-grid">
-        <div class="card">
-          <div
-            class="card-media"
-            style="background-image: url('images/basic.jpg');"
-          ></div>
+        <article class="card">
+          <div class="card-media" style="background-image:url('images/express.jpg');"></div>
           <div class="card-body">
-            <h3>Basic Wash</h3>
-            <p class="muted">Exterior hand wash, wheels cleaned, and tire shine.</p>
-            <p class="price">$40</p>
+            <h3>Express Wash</h3>
+            <p class="muted">Exterior wash + hand dry + tire shine</p>
+            <div class="price">$70</div>
+            <a href="#booking" class="btn btn-primary full">Book Express</a>
           </div>
-        </div>
+        </article>
 
-        <div class="card popular">
-          <div
-            class="card-media"
-            style="background-image: url('images/premium.jpg');"
-          ></div>
-          <div class="ribbon">Popular</div>
+        <article class="card">
+          <div class="card-media" style="background-image:url('images/complete.jpg');"></div>
           <div class="card-body">
-            <h3>Full Detail</h3>
-            <p class="muted">
-              Exterior wash, wax, interior vacuum, and surface conditioning.
-            </p>
-            <p class="price">$120</p>
+            <h3>Interior Detail</h3>
+            <p class="muted">Full interior + carpet & upholstery + seats</p>
+            <div class="price">$90</div>
+            <a href="#booking" class="btn btn-primary full">Book Interior</a>
           </div>
-        </div>
+        </article>
 
-        <div class="card">
-          <div
-            class="card-media"
-            style="background-image: url('images/interior.jpg');"
-          ></div>
+        <article class="card popular">
+          <div class="ribbon">Most Popular</div>
+          <div class="card-media" style="background-image:url('images/ceramic.jpg');"></div>
           <div class="card-body">
-            <h3>Interior Deep Clean</h3>
-            <p class="muted">Shampoo, vacuum, and leather conditioning.</p>
-            <p class="price">$80</p>
+            <h3>Complete Detail</h3>
+            <p class="muted">Full interior + full exterior</p>
+            <div class="price">$160+</div>
+            <a href="#booking" class="btn btn-primary full">Book Complete</a>
           </div>
-        </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media" style="background-image:url('images/premium.jpg');"></div>
+          <div class="card-body">
+            <h3>Ultimate Ceramic Pro</h3>
+            <p class="muted">Full detail + ceramic coating + 6-month protection</p>
+            <div class="price">$250+</div>
+            <a href="#booking" class="btn btn-primary full">Book Ultimate</a>
+          </div>
+        </article>
       </div>
     </section>
 
     <!-- Gallery -->
     <section id="gallery" class="gallery container">
       <h2>Gallery</h2>
-      <p class="section-sub">See our detailing results in action</p>
       <div class="gallery-grid">
-        <img src="images/gallery1.jpg" alt="Car detail result 1" />
-        <img src="images/gallery2.jpg" alt="Car detail result 2" />
-        <img src="images/gallery3.jpg" alt="Car detail result 3" />
-        <img src="images/gallery4.jpg" alt="Car detail result 4" />
+        <img src="images/gallery1.jpg" alt="Before interior clean">
+        <img src="images/gallery2.jpg" alt="After interior clean">
+        <img src="images/gallery3.jpg" alt="Wheel polishing">
+        <img src="images/gallery4.jpg" alt="Exterior shine finish">
       </div>
     </section>
 
     <!-- Booking -->
     <section id="booking" class="booking container">
-      <h2>Book Now</h2>
-      <p class="section-sub">Choose your date, time, and service</p>
+      <h2>Book Your Detail</h2>
+      <p class="section-sub">Fill in your details — we’ll confirm within the hour.</p>
 
-      <form id="booking-form">
-        <label>
-          Name:
-          <input type="text" name="user_name" placeholder="Your Name" required />
+      <form id="bookingForm">
+        <label>Full Name
+          <input type="text" name="name" required>
         </label>
-        <label>
-          Email:
-          <input type="email" name="user_email" placeholder="you@example.com" required />
+        <label>Email or Phone
+          <input type="text" name="contact" required>
         </label>
-        <label>
-          Phone Number:
-          <input type="tel" name="user_phone" placeholder="(555) 555-5555" required />
+        <label>Vehicle Make
+          <input type="text" name="make" placeholder="e.g. Toyota" required>
         </label>
-        <label>
-          Vehicle Make:
-          <input type="text" name="vehicle_make" placeholder="e.g. Toyota" required />
+        <label>Vehicle Model
+          <input type="text" name="model" placeholder="e.g. Camry" required>
         </label>
-        <label>
-          Vehicle Model:
-          <input type="text" name="vehicle_model" placeholder="e.g. Camry" required />
+        <label>Vehicle Year
+          <input type="number" name="year" min="1980" max="2026" required>
         </label>
-        <label>
-          Vehicle Year:
-          <input type="number" name="vehicle_year" placeholder="e.g. 2022" required />
+        <label>Package
+          <select name="package" required>
+            <option value="">-- Choose Package --</option>
+            <option>Express Wash — $70</option>
+            <option>Interior Detail — $90</option>
+            <option>Complete Detail — $160+</option>
+            <option>Ultimate Ceramic Pro — $250+</option>
+          </select>
         </label>
-        <label>
-          Preferred Date:
-          <input type="date" name="preferred_date" required />
+        <label>Preferred Date
+          <input type="date" name="date" required>
         </label>
-        <label>
-          Preferred Time:
-          <input type="time" name="preferred_time" required />
+        <label>Address
+          <input type="text" name="address" placeholder="Street, City, ZIP" required>
         </label>
-        <label>
-          Additional Message:
-          <textarea name="message" placeholder="Any special requests?"></textarea>
+        <label>Notes
+          <textarea name="notes" rows="3" placeholder="Vehicle type, extras, etc."></textarea>
         </label>
         <button type="submit" class="btn btn-primary full">Submit Booking</button>
-        <div id="booking-result" class="booking-result"></div>
+        <p id="bookingResult" class="booking-result"></p>
       </form>
     </section>
+  </main>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-      <p>© 2025 Houston’s Mobile Detailing. All rights reserved.</p>
-    </footer>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Sud Bros — All rights reserved.</p>
+    </div>
+  </footer>
 
-    <script>
-      const bookingForm = document.getElementById("booking-form");
-      const result = document.getElementById("booking-result");
+  <!-- EmailJS integration -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init({ publicKey: "p7clPP0evIYVIuils" });
+    })();
 
-      bookingForm.addEventListener("submit", function (e) {
+    const bookingForm = document.getElementById('bookingForm');
+    const bookingResult = document.getElementById('bookingResult');
+
+    bookingForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      bookingResult.textContent = "⏳ Sending your booking...";
+      bookingResult.className = "booking-result";
+
+      emailjs.sendForm("service_b2c91dg", "template_ucnib3o", this)
+        .then(() => {
+          bookingResult.textContent = "✅ Booking sent successfully! We’ll contact you soon.";
+          bookingResult.className = "booking-result success";
+          bookingForm.reset();
+        }, (error) => {
+          bookingResult.textContent = "❌ Failed to send. Please try again later.";
+          bookingResult.className = "booking-result error";
+          console.error("EmailJS error:", error);
+        });
+    });
+
+    // Year + smooth scroll
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
         e.preventDefault();
-        result.textContent = "Sending booking request...";
-
-        emailjs
-          .sendForm("service_b2c91dg", "template_ucnib3o", this)
-          .then(() => {
-            result.textContent = "✅ Booking sent successfully!";
-            result.className = "booking-result success";
-            bookingForm.reset();
-          })
-          .catch((err) => {
-            console.error("Error:", err);
-            result.textContent = "❌ Failed to send booking. Try again.";
-            result.className = "booking-result error";
-          });
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
 </html>
