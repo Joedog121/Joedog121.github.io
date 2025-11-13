@@ -1,7 +1,7 @@
 :root {
   --bg-dark: #0b0e12;
   --card-dark: #14181f;
-  --text: #f1f5f9;
+  --text: #e5e7eb;
   --muted: #9ca3af;
   --accent1: #1ecbe1;
   --accent2: #ff9a5b;
@@ -28,7 +28,7 @@ body {
 .site-header {
   position: sticky;
   top: 0;
-  background: rgba(11, 14, 18, 0.8);
+  background: rgba(11, 14, 18, 0.85);
   backdrop-filter: blur(10px);
   z-index: 50;
 }
@@ -76,28 +76,22 @@ body {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #0f8ca3, #ff7a2b);
-  color: #ffffff;
-  box-shadow: 0 0 10px rgba(30, 203, 225, 0.3);
+  background: var(--gradient);
+  color: #fff;
+  box-shadow: 0 0 10px rgba(30, 203, 225, 0.25);
   border: none;
 }
-
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 20px rgba(255, 154, 91, 0.5);
-  filter: brightness(1.1);
-}
-/* Header Book Now button specific style */
-.nav .btn-primary {
-  background: linear-gradient(135deg, #0b5566, #cc6224);
-  box-shadow: 0 0 6px rgba(30, 203, 225, 0.3);
-  padding: 8px 16px;
-  font-size: 0.95rem;
+  box-shadow: 0 0 20px rgba(255, 154, 91, 0.4);
+  filter: brightness(1.15);
 }
 
-.nav .btn-primary:hover {
-  filter: brightness(1.2);
-  box-shadow: 0 0 15px rgba(255, 154, 91, 0.6);
+.nav .btn-primary {
+  background: var(--gradient);
+  box-shadow: none;
+  padding: 8px 16px;
+  font-size: 0.95rem;
 }
 
 .btn-outline {
@@ -134,7 +128,7 @@ body {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top left, rgba(30,203,225,0.2), rgba(0,0,0,0.8));
+  background: linear-gradient(to bottom right, rgba(11, 14, 18, 0.6), rgba(0, 0, 0, 0.85));
 }
 .hero-content {
   position: relative;
@@ -142,8 +136,10 @@ body {
   max-width: 600px;
 }
 .hero h1 {
-  font-size: 2.2rem;
+  font-size: 2.6rem;
+  font-weight: 800;
   margin-bottom: 10px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 }
 .lead {
   color: var(--muted);
@@ -170,8 +166,9 @@ body {
   background: var(--card-dark);
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.02);
   transition: transform 0.2s ease;
+  position: relative;
 }
 .card:hover {
   transform: translateY(-6px);
@@ -213,10 +210,12 @@ body {
   width: 100%;
   border-radius: 12px;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: brightness(0.9);
 }
 .gallery-grid img:hover {
   transform: scale(1.05);
+  filter: brightness(1.05);
 }
 
 /* Booking */
@@ -255,11 +254,15 @@ input:focus, select:focus, textarea:focus {
   padding: 20px 0;
   border-top: 1px solid #1f242d;
 }
-/* Ensure package buttons are consistent */
-.card .btn {
-  margin-top: 10px;
-  text-align: center;
-  width: 100%;
-  display: block;
+
+/* Section fade-in animation */
+section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
