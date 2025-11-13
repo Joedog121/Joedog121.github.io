@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Sud Bros — Mobile Car Detailing</title>
-
+  <link rel="icon" href="images/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -55,43 +55,42 @@
 
     <!-- Packages -->
     <section id="packages" class="packages container">
-  <h2>Packages</h2>
-  <p class="section-sub">Choose your level of clean — we handle the rest.</p>
+      <h2>Packages</h2>
+      <p class="section-sub">Choose your level of clean — we handle the rest.</p>
 
-  <div class="package-grid">
-    <article class="card">
-      <div class="card-media" style="background-image:url('images/express.jpg');"></div>
-      <div class="card-body">
-        <h3>Express Wash</h3>
-        <p class="muted">Exterior wash + hand dry + tire shine</p>
-        <div class="price">$70</div>
-        <a href="#booking" class="btn btn-primary full">Book Express</a>
+      <div class="package-grid">
+        <article class="card">
+          <div class="card-media" style="background-image:url('images/express.jpg');"></div>
+          <div class="card-body">
+            <h3>Express Wash</h3>
+            <p class="muted">Exterior wash + hand dry + tire shine</p>
+            <div class="price">$70</div>
+            <a href="#booking" class="btn btn-primary full">Book Express</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media" style="background-image:url('images/complete.jpg');"></div>
+          <div class="card-body">
+            <h3>Interior Detail</h3>
+            <p class="muted">Full interior + carpet & upholstery + seats</p>
+            <div class="price">$90</div>
+            <a href="#booking" class="btn btn-primary full">Book Complete</a>
+          </div>
+        </article>
+
+        <article class="card popular">
+          <div class="ribbon">Most Popular</div>
+          <div class="card-media" style="background-image:url('images/ceramic.jpg');"></div>
+          <div class="card-body">
+            <h3>Complete Detail</h3>
+            <p class="muted">Full interior + full exterior</p>
+            <div class="price">$160+</div>
+            <a href="#booking" class="btn btn-primary full">Book Ceramic</a>
+          </div>
+        </article>
       </div>
-    </article>
-
-    <article class="card">
-      <div class="card-media" style="background-image:url('images/complete.jpg');"></div>
-      <div class="card-body">
-        <h3>Interior Detail</h3>
-        <p class="muted">Full interior + carpet & upholstery + seats</p>
-        <div class="price">$90</div>
-        <a href="#booking" class="btn btn-primary full">Book Complete</a>
-      </div>
-    </article>
-
-    <article class="card popular">
-       <div class="ribbon">Most Popular</div>
-      <div class="card-media" style="background-image:url('images/ceramic.jpg');"></div>
-      <div class="card-body">
-        <h3>Complete Detail</h3>
-        <p class="muted">Full interior + full exterior</p>
-        <div class="price">$160+</div>
-        <a href="#booking" class="btn btn-primary full">Book Ceramic</a>
-      </div>
-    </article>
-  </div>
-</section>
-
+    </section>
 
     <!-- Gallery -->
     <section id="gallery" class="gallery container">
@@ -110,16 +109,13 @@
       <p class="section-sub">Fill in your details — we’ll confirm within the hour.</p>
 
       <form id="bookingForm" onsubmit="handleBooking(event)">
-        <label>
-          Full Name
+        <label>Full Name
           <input type="text" name="name" required>
         </label>
-        <label>
-          Email or Phone
+        <label>Email or Phone
           <input type="text" name="contact" required>
         </label>
-        <label>
-          Package
+        <label>Package
           <select name="package" required>
             <option value="">-- Choose Package --</option>
             <option>Express Wash — $70</option>
@@ -127,16 +123,13 @@
             <option>Complete Detail — $160+</option>
           </select>
         </label>
-        <label>
-          Preferred Date
+        <label>Preferred Date
           <input type="date" name="date" required>
         </label>
-        <label>
-          Address
+        <label>Address
           <input type="text" name="address" placeholder="Street, City, ZIP" required>
         </label>
-        <label>
-          Notes
+        <label>Notes
           <textarea name="notes" rows="3" placeholder="Vehicle type, extras, etc."></textarea>
         </label>
         <button type="submit" class="btn btn-primary full">Submit Booking</button>
@@ -154,14 +147,8 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Smooth scroll for all anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', e => {
-        e.preventDefault();
-        const target = document.querySelector(a.getAttribute('href'));
-        if (target) target.scrollIntoView({ behavior: 'smooth' });
-      });
-    });
+    // Smooth scroll for anchor links
+    document.documentElement.style.scrollBehavior = "smooth";
 
     // Booking form handler
     function handleBooking(e) {
@@ -182,6 +169,15 @@
       }
       res.scrollIntoView({ behavior: "smooth", block: "center" });
     }
+
+    // Fade-in animation
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    });
+    sections.forEach(sec => observer.observe(sec));
   </script>
 </body>
 </html>
