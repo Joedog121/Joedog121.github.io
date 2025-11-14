@@ -229,3 +229,88 @@ input:focus, select:focus, textarea:focus {
   display: block;
 }
 
+/* ------------------------------------------------------- */
+/* 📌 ADDED BELOW THIS LINE — CONTACT STRIP + CTA SECTION */
+/* ------------------------------------------------------- */
+
+/* Contact strip at top of header */
+.contact-strip {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  padding: 6px 12px;
+  background: rgba(20, 24, 31, 0.85);
+  border-bottom: 1px solid #1f242d;
+}
+.contact-strip .contact-link {
+  color: var(--text);
+  text-decoration: none;
+}
+.contact-strip .contact-link:hover {
+  color: var(--accent1);
+}
+.contact-strip .sep {
+  color: var(--muted);
+}
+
+/* Contact section */
+.contact-card {
+  background: var(--card-dark);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.4);
+  display: grid;
+  gap: 12px;
+  justify-items: center;
+  text-align: center;
+}
+.contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--text);
+  border: 1px solid #2a2f3a;
+  background: #1c212a;
+}
+.contact-item:hover {
+  border-color: var(--accent1);
+  color: var(--accent1);
+}
+.contact .small {
+  font-size: 0.9rem;
+}
+
+/* Floating Call Button (mobile only) */
+.fab-call {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(135deg,#0f8ca3,#ff7a2b);
+  box-shadow: 0 10px 25px rgba(0,0,0,.5), 0 0 14px rgba(30,203,225,0.3);
+  z-index: 100;
+}
+
+.fab-call:hover {
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  /* hide floating button on desktop */
+  .fab-call {
+    display: none;
+  }
+}
+
