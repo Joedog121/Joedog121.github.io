@@ -234,26 +234,36 @@ input:focus, select:focus, textarea:focus {
 /* ------------------------------------------------------- */
 
 /* Contact strip at top of header */
-.contact-strip {
+.clean-strip {
   display: flex;
-  gap: 10px;
   align-items: center;
-  justify-content: center;
-  font-size: 0.95rem;
-  padding: 6px 12px;
-  background: rgba(20, 24, 31, 0.85);
-  border-bottom: 1px solid #1f242d;
+  justify-content: flex-end;
+  gap: 18px;
+  padding: 6px 20px;
+  background: rgba(0,0,0,0.5);
+  font-size: 0.85rem;
+  color: var(--muted);
+  border-bottom: 1px solid #151920;
 }
-.contact-strip .contact-link {
-  color: var(--text);
+
+.clean-strip a {
   text-decoration: none;
+  color: var(--muted);
+  transition: .2s ease;
 }
-.contact-strip .contact-link:hover {
+
+.clean-strip a:hover {
   color: var(--accent1);
 }
-.contact-strip .sep {
-  color: var(--muted);
+
+.clean-strip .dot {
+  width: 4px;
+  height: 4px;
+  background: var(--accent1);
+  border-radius: 50%;
+  opacity: .5;
 }
+
 
 /* Contact section */
 .contact-card {
