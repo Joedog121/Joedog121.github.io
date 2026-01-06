@@ -149,3 +149,28 @@ h2 { text-align: center; font-size: 1.6rem; margin-bottom: 6px; }
 .card-media { height: 180px; background-size: cover; background-position: center; }
 .card-body { padding: 16px; }
 .price { font-weight: 700; font-size: 1.4rem; margin: 8px
+/* Social icons in footer */
+.socials {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.social-icon svg {
+  transition: transform 0.2s, fill 0.2s;
+  cursor: pointer;
+}
+
+.social-icon:hover svg {
+  transform: scale(1.2);
+  fill: var(--accent1); /* Instagram blue/orange accent color */
+}
+
+/* Optional: smaller icons on mobile */
+@media (max-width: 640px) {
+  .social-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+}
