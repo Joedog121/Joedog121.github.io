@@ -129,7 +129,7 @@ body {
 .lead { color: var(--muted); margin-bottom: 20px; }
 
 /* Packages */
-.packages h2, .gallery h2, .booking h2 {
+.packages h2, .gallery h2, .booking h2, .about h2 {
   text-align: center;
   font-size: 1.6rem;
   margin-bottom: 6px;
@@ -243,30 +243,36 @@ section {
   margin: 6px 0;
   padding: 0;
 }
-
-.details-toggle:hover {
-  color: var(--accent2);
-}
-
+.details-toggle:hover { color: var(--accent2); }
 .package-details {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.35s ease;
 }
-
-.package-details.open {
-  max-height: 500px;
-}
-
+.package-details.open { max-height: 500px; }
 .package-details ul {
   margin: 10px 0;
   padding-left: 18px;
 }
-
 .package-details li {
   font-size: 0.9rem;
   color: var(--muted);
   margin-bottom: 6px;
+}
+
+/* About Us Section */
+.about {
+  background: linear-gradient(135deg, rgba(30,203,225,0.2), rgba(255,154,91,0.2)), var(--card-dark);
+  border-radius: var(--radius);
+  padding: 30px 20px;
+  margin: 40px 0;
+  box-shadow: 0 6px 20px rgba(0,0,0,.4);
+}
+.about p {
+  max-width: 800px;
+  margin: 12px auto;
+  line-height: 1.7;
+  color: var(--text);
 }
 
 /* Mobile header spacing */
@@ -293,33 +299,4 @@ section {
 /* Button tap feel */
 .btn:active {
   transform: scale(0.97);
-}
-/* About Us Section */
-.about h2 {
-  text-align: center;
-  font-size: 1.6rem;
-  margin-bottom: 6px;
-}
-.about .section-sub {
-  text-align: center;
-  color: var(--muted);
-  margin-bottom: 16px;
-}
-.about p {
-  max-width: 700px;
-  margin: 8px auto 16px auto;
-  line-height: 1.6;
-  color: var(--text);
-  text-align: center;
-}
-
-/* Footer links styling */
-.site-footer a {
-  color: var(--accent1);
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-.site-footer a:hover {
-  color: var(--accent2);
 }
