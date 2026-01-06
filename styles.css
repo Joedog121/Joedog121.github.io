@@ -228,3 +228,69 @@ input:focus, select:focus, textarea:focus {
   width: 100%;
   display: block;
 }
+/* Fix anchor offset for sticky header */
+section {
+  scroll-margin-top: 90px;
+}
+
+/* Package dropdown */
+.details-toggle {
+  background: none;
+  border: none;
+  color: var(--accent1);
+  font-weight: 600;
+  cursor: pointer;
+  margin: 6px 0;
+  padding: 0;
+}
+
+.details-toggle:hover {
+  color: var(--accent2);
+}
+
+.package-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.package-details.open {
+  max-height: 500px;
+}
+
+.package-details ul {
+  margin: 10px 0;
+  padding-left: 18px;
+}
+
+.package-details li {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+/* Mobile header spacing */
+@media (max-width: 640px) {
+  .header-inner {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Button tap feel */
+.btn:active {
+  transform: scale(0.97);
+}
