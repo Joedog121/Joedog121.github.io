@@ -307,5 +307,26 @@
       });
     });
   </script>
+  <script>
+  /* Accordion dropdowns */
+  document.querySelectorAll(".details-toggle").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const details = btn.nextElementSibling;
+      const open = details.classList.contains("open");
+
+      details.classList.toggle("open");
+      btn.textContent = open ? "View details ▾" : "Hide details ▴";
+    });
+  });
+
+  /* Auto-select package on booking */
+  document.querySelectorAll("[data-package]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const select = document.querySelector('select[name="package"]');
+      select.value = btn.dataset.package;
+    });
+  });
+</script>
+
 </body>
 </html>
