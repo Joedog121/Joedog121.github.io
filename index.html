@@ -7,6 +7,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
+  
+<script>
+  document.querySelectorAll('.dropdown-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const content = button.nextElementSibling;
+      content.classList.toggle('active');
+      button.textContent = content.classList.contains('active')
+        ? 'Hide Details'
+        : 'View Details';
+    });
+  });
+</script>
 
 <body>
   <header class="site-header">
@@ -64,6 +76,19 @@
             <h3>Express Wash</h3>
             <p class="muted">Exterior wash + hand dry + tire shine</p>
             <div class="price">$70+</div>
+            <div class="price">$70+</div>
+
+<button class="dropdown-toggle">View Details</button>
+<div class="dropdown-content">
+  <ul>
+    <li>✔ Foam hand wash</li>
+    <li>✔ Bug & grime removal</li>
+    <li>✔ Hand-dried finish</li>
+    <li>✔ Tire shine applied</li>
+    <li>✔ Exterior windows cleaned</li>
+  </ul>
+</div>
+
             <a href="#booking" class="btn btn-primary full">Book Express</a>
           </div>
         </article>
@@ -74,6 +99,19 @@
             <h3>Interior Detail</h3>
             <p class="muted">Full interior + carpet & upholstery + seats</p>
             <div class="price">$90+</div>
+            <div class="price">$90+</div>
+
+<button class="dropdown-toggle">View Details</button>
+<div class="dropdown-content">
+  <ul>
+    <li>✔ Full interior vacuum</li>
+    <li>✔ Carpet & upholstery shampoo</li>
+    <li>✔ Leather seat cleaning</li>
+    <li>✔ Dashboard & trim wipedown</li>
+    <li>✔ Interior windows cleaned</li>
+  </ul>
+</div>
+
             <a href="#booking" class="btn btn-primary full">Book Interior</a>
           </div>
         </article>
@@ -85,6 +123,19 @@
             <h3>Complete Detail</h3>
             <p class="muted">Full interior + full exterior + clay bar & wax</p>
             <div class="price">$210+</div>
+            <div class="price">$210+</div>
+
+<button class="dropdown-toggle">View Details</button>
+<div class="dropdown-content">
+  <ul>
+    <li>✔ Complete interior detail</li>
+    <li>✔ Exterior wash & hand dry</li>
+    <li>✔ Clay bar treatment</li>
+    <li>✔ Wax protection</li>
+    <li>✔ Tire & rim detailing</li>
+  </ul>
+</div>
+
             <a href="#booking" class="btn btn-primary full">Book Complete</a>
           </div>
         </article>
@@ -95,6 +146,19 @@
             <h3>Ultimate Ceramic Pro</h3>
             <p class="muted">Complete detail + ceramic coating + 6-month protection</p>
             <div class="price">$265+</div>
+            <div class="price">$265+</div>
+
+<button class="dropdown-toggle">View Details</button>
+<div class="dropdown-content">
+  <ul>
+    <li>✔ Full interior & exterior detail</li>
+    <li>✔ Paint decontamination</li>
+    <li>✔ Ceramic coating applied</li>
+    <li>✔ 6-month protection</li>
+    <li>✔ Hydrophobic finish</li>
+  </ul>
+</div>
+
             <a href="#booking" class="btn btn-primary full">Book Ultimate</a>
           </div>
         </article>
