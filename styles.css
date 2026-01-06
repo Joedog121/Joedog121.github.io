@@ -228,37 +228,3 @@ input:focus, select:focus, textarea:focus {
   width: 100%;
   display: block;
 }
-/* Package Dropdown (ADD ONLY) */
-.dropdown-toggle {
-  background: none;
-  border: none;
-  color: var(--accent1);
-  font-weight: 600;
-  cursor: pointer;
-  padding: 0;
-  margin: 10px 0;
-}
-
-.dropdown-toggle:hover {
-  text-decoration: underline;
-}
-
-.dropdown-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.35s ease;
-}
-
-.dropdown-content ul {
-  margin: 10px 0 14px;
-  padding-left: 18px;
-  color: var(--muted);
-}
-
-.dropdown-content li {
-  margin-bottom: 6px;
-}
-
-.dropdown-content.active {
-  max-height: 300px;
-}
