@@ -1,50 +1,15 @@
 <!doctype html>
 <html lang="en">
-<header class="site-header">
-  <div class="container header-inner">
-    <div class="brand">
-      <svg class="logo" viewBox="0 0 100 100" aria-hidden="true">
-        <defs>
-          <linearGradient id="g1" x1="0" x2="1">
-            <stop offset="0" stop-color="#1ecbe1"/>
-            <stop offset="1" stop-color="#ff9a5b"/>
-          </linearGradient>
-        </defs>
-        <rect x="8" y="30" width="84" height="40" rx="6" fill="url(#g1)"/>
-        <circle cx="30" cy="60" r="6" fill="#fff"/>
-        <circle cx="70" cy="60" r="6" fill="#fff"/>
-        <text x="50" y="46" text-anchor="middle" font-size="18" font-weight="700" fill="#fff" font-family="Inter, system-ui">Sud</text>
-      </svg>
-      <div>
-        <div class="brand-name">Sud Bros</div>
-        <div class="brand-tag">Mobile Car Detailing</div>
-      </div>
-    </div>
-
-    <nav class="nav">
-      <a href="#about">About Us</a>
-      <a href="#packages">Packages</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact Us</a>
-      <a href="#booking" class="btn btn-primary">Book Now</a>
-      <div class="social-links">
-        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
-          <img src="images/instagram.svg" alt="Instagram" class="social-icon">
-        </a>
-        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
-          <img src="images/facebook.svg" alt="Facebook" class="social-icon">
-        </a>
-        <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok">
-          <img src="images/tiktok.svg" alt="TikTok" class="social-icon">
-        </a>
-      </div>
-    </nav>
-  </div>
-</header>
-
-  
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sud Bros — Mobile Car Detailing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
 
 <body>
+  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
@@ -65,10 +30,24 @@
           <div class="brand-tag">Mobile Car Detailing</div>
         </div>
       </div>
+
       <nav class="nav">
+        <a href="#about">About Us</a>
         <a href="#packages">Packages</a>
         <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact Us</a>
         <a href="#booking" class="btn btn-primary">Book Now</a>
+        <div class="social-links">
+          <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+            <img src="images/instagram.svg" alt="Instagram" class="social-icon">
+          </a>
+          <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+            <img src="images/facebook.svg" alt="Facebook" class="social-icon">
+          </a>
+          <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok">
+            <img src="images/tiktok.svg" alt="TikTok" class="social-icon">
+          </a>
+        </div>
       </nav>
     </div>
   </header>
@@ -88,109 +67,105 @@
       </div>
     </section>
 
+    <!-- About Us -->
+    <section id="about" class="about container">
+      <h2>About Sud Bros</h2>
+      <p class="section-sub">We are a professional mobile car detailing service committed to bringing your vehicle to showroom perfection, wherever you are. Our experienced team uses premium products and techniques to protect your paint and make your car shine.</p>
+      <div class="about-content">
+        <p>Founded with passion for clean cars, Sud Bros offers flexible appointments, convenient on-site services, and a range of detailing packages from Express Wash to Ultimate Ceramic Pro. Our goal is simple: happy customers, spotless cars.</p>
+      </div>
+    </section>
+
     <!-- Packages -->
     <section id="packages" class="packages container">
-  <h2>Packages</h2>
-  <p class="section-sub">Choose your level of clean — we handle the rest.</p>
+      <h2>Packages</h2>
+      <p class="section-sub">Choose your level of clean — we handle the rest.</p>
+      <div class="package-grid">
 
-  <div class="package-grid">
+        <!-- Express -->
+        <article class="card">
+          <div class="card-media" style="background-image:url('images/express.jpg');"></div>
+          <div class="card-body">
+            <h3>Express Wash</h3>
+            <p class="muted">Exterior wash + hand dry + tire shine</p>
+            <button class="details-toggle" type="button">View details ▾</button>
+            <div class="package-details">
+              <ul>
+                <li>Foam bath & hand wash</li>
+                <li>Bug & light grime removal</li>
+                <li>Hand dry (scratch-free)</li>
+                <li>Tire shine & rim wipe-down</li>
+              </ul>
+            </div>
+            <div class="price">$50+</div>
+            <a href="#booking" class="btn btn-primary full" data-package="Express Wash — $50+">Book Express</a>
+          </div>
+        </article>
 
-    <!-- Express -->
-    <article class="card">
-      <div class="card-media" style="background-image:url('images/express.jpg');"></div>
-      <div class="card-body">
-        <h3>Express Wash</h3>
-        <p class="muted">Exterior wash + hand dry + tire shine</p>
+        <!-- Interior -->
+        <article class="card">
+          <div class="card-media" style="background-image:url('images/complete.jpg');"></div>
+          <div class="card-body">
+            <h3>Interior Detail</h3>
+            <p class="muted">Full interior + carpets & upholstery</p>
+            <button class="details-toggle" type="button">View details ▾</button>
+            <div class="package-details">
+              <ul>
+                <li>Full interior vacuum (seats, carpets, trunk)</li>
+                <li>Dashboard, console & panels cleaned</li>
+                <li>Door jambs wiped</li>
+                <li>Interior windows cleaned</li>
+              </ul>
+            </div>
+            <div class="price">$90+</div>
+            <a href="#booking" class="btn btn-primary full" data-package="Interior Detail — $90+">Book Interior</a>
+          </div>
+        </article>
 
-        <button class="details-toggle" type="button">View details ▾</button>
-        <div class="package-details">
-          <ul>
-            <li>Foam bath & hand wash</li>
-            <li>Bug & light grime removal</li>
-            <li>Hand dry (scratch-free)</li>
-            <li>Tire shine & rim wipe-down</li>
-          </ul>
-        </div>
+        <!-- Complete -->
+        <article class="card popular">
+          <div class="ribbon">Most Popular</div>
+          <div class="card-media" style="background-image:url('images/ceramic.jpg');"></div>
+          <div class="card-body">
+            <h3>Complete Detail</h3>
+            <p class="muted">Full interior + full exterior + wax</p>
+            <button class="details-toggle" type="button">View details ▾</button>
+            <div class="package-details">
+              <ul>
+                <li>Everything in Express Wash</li>
+                <li>Complete interior detail</li>
+                <li>Clay bar decontamination</li>
+                <li>Wax & paint protection</li>
+                <li>Windows inside & out</li>
+              </ul>
+            </div>
+            <div class="price">$200+</div>
+            <a href="#booking" class="btn btn-primary full" data-package="Complete Detail — $200+">Book Complete</a>
+          </div>
+        </article>
 
-        <div class="price">$50+</div>
-        <a href="#booking" class="btn btn-primary full"
-           data-package="Express Wash — $50+">Book Express</a>
+        <!-- Ultimate -->
+        <article class="card">
+          <div class="card-media" style="background-image:url('images/premium.jpg');"></div>
+          <div class="card-body">
+            <h3>Ultimate Ceramic Pro</h3>
+            <p class="muted">Ceramic coating + 6-month protection</p>
+            <button class="details-toggle" type="button">View details ▾</button>
+            <div class="package-details">
+              <ul>
+                <li>Complete Detail included</li>
+                <li>Professional ceramic coating</li>
+                <li>Enhanced gloss & hydrophobic finish</li>
+                <li>6-month paint protection</li>
+              </ul>
+            </div>
+            <div class="price">$265+</div>
+            <a href="#booking" class="btn btn-primary full" data-package="Ultimate Ceramic Pro — $265+">Book Ultimate</a>
+          </div>
+        </article>
+
       </div>
-    </article>
-
-    <!-- Interior -->
-    <article class="card">
-      <div class="card-media" style="background-image:url('images/complete.jpg');"></div>
-      <div class="card-body">
-        <h3>Interior Detail</h3>
-        <p class="muted">Full interior + carpets & upholstery</p>
-
-        <button class="details-toggle" type="button">View details ▾</button>
-        <div class="package-details">
-          <ul>
-            <li>Full interior vacuum (seats, carpets, trunk)</li>
-            <li>Dashboard, console & panels cleaned</li>
-            <li>Door jambs wiped</li>
-            <li>Interior windows cleaned</li>
-          </ul>
-        </div>
-
-        <div class="price">$90+</div>
-        <a href="#booking" class="btn btn-primary full"
-           data-package="Interior Detail — $90+">Book Interior</a>
-      </div>
-    </article>
-
-    <!-- Complete -->
-    <article class="card popular">
-      <div class="ribbon">Most Popular</div>
-      <div class="card-media" style="background-image:url('images/ceramic.jpg');"></div>
-      <div class="card-body">
-        <h3>Complete Detail</h3>
-        <p class="muted">Full interior + full exterior + wax</p>
-
-        <button class="details-toggle" type="button">View details ▾</button>
-        <div class="package-details">
-          <ul>
-            <li>Everything in Express Wash</li>
-            <li>Complete interior detail</li>
-            <li>Clay bar decontamination</li>
-            <li>Wax & paint protection</li>
-            <li>Windows inside & out</li>
-          </ul>
-        </div>
-
-        <div class="price">$200+</div>
-        <a href="#booking" class="btn btn-primary full"
-           data-package="Complete Detail — $200+">Book Complete</a>
-      </div>
-    </article>
-
-    <!-- Ultimate -->
-    <article class="card">
-      <div class="card-media" style="background-image:url('images/premium.jpg');"></div>
-      <div class="card-body">
-        <h3>Ultimate Ceramic Pro</h3>
-        <p class="muted">Ceramic coating + 6-month protection</p>
-
-        <button class="details-toggle" type="button">View details ▾</button>
-        <div class="package-details">
-          <ul>
-            <li>Complete Detail included</li>
-            <li>Professional ceramic coating</li>
-            <li>Enhanced gloss & hydrophobic finish</li>
-            <li>6-month paint protection</li>
-          </ul>
-        </div>
-
-        <div class="price">$265+</div>
-        <a href="#booking" class="btn btn-primary full"
-           data-package="Ultimate Ceramic Pro — $265+">Book Ultimate</a>
-      </div>
-    </article>
-
-  </div>
-</section>
+    </section>
 
     <!-- Gallery -->
     <section id="gallery" class="gallery container">
@@ -203,27 +178,32 @@
       </div>
     </section>
 
+    <!-- Contact Us -->
+    <section id="contact" class="contact container">
+      <h2>Contact Us</h2>
+      <p class="section-sub">Have questions or need a custom service? Reach out to us!</p>
+      <div class="contact-info">
+        <p>Email: <a href="mailto:info@sudbros.com">info@sudbros.com</a></p>
+        <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+        <p>Follow us on social media for updates and promotions!</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com" target="_blank"><img src="images/instagram.svg" alt="Instagram" class="social-icon"></a>
+          <a href="https://www.facebook.com" target="_blank"><img src="images/facebook.svg" alt="Facebook" class="social-icon"></a>
+          <a href="https://www.tiktok.com" target="_blank"><img src="images/tiktok.svg" alt="TikTok" class="social-icon"></a>
+        </div>
+      </div>
+    </section>
+
     <!-- Booking -->
     <section id="booking" class="booking container">
       <h2>Book Your Detail</h2>
       <p class="section-sub">Fill in your details — we’ll confirm within the hour.</p>
-
       <form id="bookingForm">
-        <label>Full Name
-          <input type="text" name="name" required>
-        </label>
-        <label>Email or Phone
-          <input type="text" name="contact" required>
-        </label>
-        <label>Vehicle Make
-          <input type="text" name="make" placeholder="e.g. Toyota" required>
-        </label>
-        <label>Vehicle Model
-          <input type="text" name="model" placeholder="e.g. Camry" required>
-        </label>
-        <label>Vehicle Year
-          <input type="number" name="year" min="1980" max="2026" required>
-        </label>
+        <label>Full Name <input type="text" name="name" required></label>
+        <label>Email or Phone <input type="text" name="contact" required></label>
+        <label>Vehicle Make <input type="text" name="make" placeholder="e.g. Toyota" required></label>
+        <label>Vehicle Model <input type="text" name="model" placeholder="e.g. Camry" required></label>
+        <label>Vehicle Year <input type="number" name="year" min="1980" max="2026" required></label>
         <label>Package
           <select name="package" required>
             <option value="">-- Choose Package --</option>
@@ -233,12 +213,8 @@
             <option>Ultimate Ceramic Pro — $265+</option>
           </select>
         </label>
-        <label>Preferred Date
-          <input type="date" name="date" required>
-        </label>
-        <label>Address
-          <input type="text" name="address" placeholder="Street, City, ZIP" required>
-        </label>
+        <label>Preferred Date <input type="date" name="date" required></label>
+        <label>Address <input type="text" name="address" placeholder="Street, City, ZIP" required></label>
         <label>Notes - prices vary
           <textarea name="notes" rows="3" placeholder="Wax, headlight-restoration, bug-removal, seat removal, polishing, extras, etc."></textarea>
         </label>
@@ -246,71 +222,67 @@
         <p id="bookingResult" class="booking-result"></p>
       </form>
     </section>
+
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© <span id="year"></span> Sud Bros — All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- EmailJS integration -->
+  <!-- EmailJS -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>
-    (function() {
-      emailjs.init({ publicKey: "p7clPP0evIYVIuils" });
-    })();
+    (function(){ emailjs.init({ publicKey: "p7clPP0evIYVIuils" }); })();
 
     const bookingForm = document.getElementById('bookingForm');
     const bookingResult = document.getElementById('bookingResult');
 
-    bookingForm.addEventListener('submit', function(e) {
+    bookingForm.addEventListener('submit', function(e){
       e.preventDefault();
       bookingResult.textContent = "⏳ Sending your booking...";
       bookingResult.className = "booking-result";
 
-      emailjs.sendForm("service_b2c91dg", "template_ucnib3o", this)
-        .then(() => {
-          bookingResult.textContent = "✅ Booking sent successfully! We’ll contact you soon.";
-          bookingResult.className = "booking-result success";
-          bookingForm.reset();
-        }, (error) => {
-          bookingResult.textContent = "❌ Failed to send. Please try again later.";
-          bookingResult.className = "booking-result error";
-          console.error("EmailJS error:", error);
-        });
+      emailjs.sendForm("service_b2c91dg","template_ucnib3o",this)
+      .then(()=>{
+        bookingResult.textContent = "✅ Booking sent successfully! We’ll contact you soon.";
+        bookingResult.className = "booking-result success";
+        bookingForm.reset();
+      },(error)=>{
+        bookingResult.textContent = "❌ Failed to send. Please try again later.";
+        bookingResult.className = "booking-result error";
+        console.error("EmailJS error:",error);
+      });
     });
 
-    // Year + smooth scroll
     document.getElementById('year').textContent = new Date().getFullYear();
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', e => {
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
         e.preventDefault();
         const target = document.querySelector(a.getAttribute('href'));
-        if (target) target.scrollIntoView({ behavior: 'smooth' });
+        if(target) target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Accordion dropdowns
+    document.querySelectorAll(".details-toggle").forEach(btn=>{
+      btn.addEventListener("click",()=>{
+        const details=btn.nextElementSibling;
+        const open=details.classList.contains("open");
+        details.classList.toggle("open");
+        btn.textContent=open?"View details ▾":"Hide details ▴";
+      });
+    });
+
+    // Auto-select package
+    document.querySelectorAll("[data-package]").forEach(btn=>{
+      btn.addEventListener("click",()=>{
+        const select=document.querySelector('select[name="package"]');
+        select.value=btn.dataset.package;
       });
     });
   </script>
-  <script>
-  /* Accordion dropdowns */
-  document.querySelectorAll(".details-toggle").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const details = btn.nextElementSibling;
-      const open = details.classList.contains("open");
-
-      details.classList.toggle("open");
-      btn.textContent = open ? "View details ▾" : "Hide details ▴";
-    });
-  });
-
-  /* Auto-select package on booking */
-  document.querySelectorAll("[data-package]").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const select = document.querySelector('select[name="package"]');
-      select.value = btn.dataset.package;
-    });
-  });
-</script>
-
 </body>
 </html>
