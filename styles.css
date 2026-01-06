@@ -294,3 +294,32 @@ section {
 .btn:active {
   transform: scale(0.97);
 }
+/* About Us Section */
+.about h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+}
+.about .section-sub {
+  text-align: center;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+.about p {
+  max-width: 700px;
+  margin: 8px auto 16px auto;
+  line-height: 1.6;
+  color: var(--text);
+  text-align: center;
+}
+
+/* Footer links styling */
+.site-footer a {
+  color: var(--accent1);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+.site-footer a:hover {
+  color: var(--accent2);
+}
